@@ -21570,3 +21570,17 @@ Rendered shared/_navigation.html.erb (0.7ms)
 Rendered brands/_brands.html.erb (20.3ms)
 Rendered brands/show.html.erb within layouts/application (50.0ms)
 Completed 200 OK in 92ms (Views: 56.8ms | ActiveRecord: 9.5ms)
+DEPRECATION WARNING: Use toplevel init.rb; rails/init.rb is deprecated: /Users/synthmax/Dropbox/mobile/vendor/plugins/paperclip/rails/init.rb. (called from <top (required)> at /Users/synthmax/Dropbox/mobile/config/environment.rb:5)
+
+
+Started GET "/vehicles/1/brands/3" for 127.0.0.1 at 2011-03-03 23:18:59 +0100
+  Processing by BrandsController#show as HTML
+  Parameters: {"vehicle_id"=>"1", "id"=>"3"}
+  [1m[36mSQL (26.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mVehicle Load (0.5ms)[0m  SELECT `vehicles`.* FROM `vehicles` WHERE `vehicles`.`id` = 1 LIMIT 1
+  [1m[36mBrand Load (0.6ms)[0m  [1mSELECT `brands`.* FROM `brands` WHERE `brands`.`id` = 3 AND (`brands`.vehicle_id = 1) LIMIT 1[0m
+Rendered shared/_navigation.html.erb (0.8ms)
+  [1m[35mModel Load (0.6ms)[0m  SELECT `models`.* FROM `models` WHERE (`models`.brand_id = 3) ORDER BY title asc
+Rendered brands/_brands.html.erb (18.5ms)
+Rendered brands/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 97ms (Views: 41.6ms | ActiveRecord: 27.9ms | Sphinx: 0.0ms)
