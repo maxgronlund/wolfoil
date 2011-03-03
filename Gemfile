@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
+gem 'rails', '3.0.5'
 gem 'ruby-mysql', '2.9.3'
 gem 'inherited_resources', '1.1.2'
 
