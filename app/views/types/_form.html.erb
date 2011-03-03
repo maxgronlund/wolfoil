@@ -1,0 +1,58 @@
+<%= form_for( [@model,@type],:html => { :multipart => true } ) do |f| %>
+<%#= form_for(@type) do |f| %>
+  <% if @type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@type.errors.count, "error") %> prohibited this type from being saved:</h2>
+
+      <ul>
+      <% @type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :size => '50' %>
+  </div>
+	
+	<div class="field">
+	    <%= f.label :engine %><br />
+	    <%= f.text_field :engine, :size => '50' %>
+	</div>
+	
+	<div class="field">
+	    <%= f.label :capacity %><br />
+	    <%= f.text_field :capacity, :size => '50' %>
+	</div>
+	
+	<div class="field">
+	    <%= f.label :use %><br />
+	    <%= f.text_field :use, :size => '50' %>
+	</div>
+	
+	<div class="field">
+	    <%= f.label :intervals %><br />
+	    <%= f.text_field :intervals, :size => '50' %>
+	</div>
+	
+	<div class="field">
+	    <%= f.label :product %><br />
+	    <%= f.text_field :product, :size => '50' %>
+	</div>
+	
+	<div class="field">
+	    <%= f.label :product1 %><br />
+	    <%= f.text_field :product1, :size => '50' %>
+	</div>
+	
+	<div class="field">
+	    <%= f.label :product2 %><br />
+	    <%= f.text_field :product2, :size => '50' %>
+	</div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

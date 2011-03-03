@@ -1,0 +1,37 @@
+<div id="page_wrapper">
+	
+	<div id="content_left">
+		
+		<div class="grid_4 alpha omega">
+			<%= render :partial => "shared/navigation" %>
+		</div>
+		<div class="grid_4">
+			<h2><%= @vehicle.title %></h2>
+		</div>
+		<%= render 'brands'%>
+		
+	</div>
+	<div id="content_right">
+		
+		<div class="grid_4 alpha omega">
+		<%= render :partial => "shared/navigation" %>
+		</div>
+		<div class="grid_4 alpha omega">
+			<h2><%= @vehicle.title %></h2>
+		</div>
+		
+		<%= render 'brands'%>
+	</div>
+	<div id="content_normal">
+		
+		<div class="grid_4 alpha omega">
+		<%= render :partial => "shared/navigation" %>
+		</div>
+		<div class="grid_4 alpha omega">
+			<h2><%= @vehicle.title %></h2>
+		</div>
+		<%= render 'brands'%>
+	</div>
+	<div id="content_flipped">
+	</div>
+</div>

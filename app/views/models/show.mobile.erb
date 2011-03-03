@@ -1,0 +1,43 @@
+<div class="grid_4 alpha omega">
+<%= render :partial => "shared/navigation" %>
+</div>
+<div class="grid_4 height_78 list-back">
+	<div class="grid_1 alpha">
+		<%= image_tag @model.brand.logo.url(:normal) unless @brand.logo.nil? %>
+	</div>
+	<div class="grid_3 omega">
+		<h2>Types</h2>
+		<div class="margin_top_7">
+			<p>Model: <%= @model.title%></p>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<div id="page_wrapper">
+	
+	<div id="content_left">
+		
+		<%= render 'types'%>
+		
+	</div>
+	<div id="content_right">
+		
+		<%= render 'types'%>
+	</div>
+	<div id="content_normal">
+		
+	
+		<%= render 'types'%>
+	</div>
+	<div id="content_flipped">
+	</div>
+</div>
+
+
+
+

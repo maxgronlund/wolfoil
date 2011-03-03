@@ -1,0 +1,20 @@
+<% @vehicle.brands.order('title asc').each do |brand| %>
+
+<div class="grid_4 height_78 list-back">
+	<div class="line_1"></div>
+	<div class="grid_1 alpha">
+		<%= link_to image_tag(brand.logo.url(:normal),
+								:border=>0 ), 
+								vehicle_brand_path(@vehicle,brand)%>
+	</div>
+	<div class="grid_2 omega margin_top_14">
+		<h2><%= link_to brand.title, vehicle_brand_path(@vehicle, brand) %></h2>
+	</div>
+	
+	<div class="grid_1 omega">
+		<%= link_to 'Show', vehicle_brand_path(@vehicle,brand) %> <br/> 
+		<%= link_to 'Edit', edit_vehicle_brand_path(@vehicle,brand) %> <br/> 
+		<%= link_to 'Delete', vehicle_brand_path(@vehicle,brand), :confirm => 'Are you sure?', :method => :delete %>
+	</div>
+</div>
+<%end%>

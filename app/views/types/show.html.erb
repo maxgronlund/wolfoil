@@ -1,0 +1,23 @@
+<div class="grid_4 height_78 list-back">
+	<div class="grid_1 alpha">
+		<%= image_tag @model.brand.logo.url(:normal) unless @model.brand.logo.nil? %>
+	</div>
+	<div class="grid_3 omega margin_top_7">
+		<h6><%= @model.brand.title %> <%= @model.title %></h6>
+		<p><%= @model.year%></p>
+	</div>
+</div>
+
+<div class="grid_4">
+	<h2><%= @type.title %></h2><br/>
+</div>
+
+<div class="grid_4">
+	<h2>Engine: <%= @type.engine %></h2><br/>
+</div>
+
+
+<%#= link_to 'Edit', edit_model_type_path(@type) %> |
+<%#= link_to 'Back', model_type_path( @type.vehicle , @model)  %>
+<%#= link_to 'Show', vehicle_brand_path(@vehicle,brand) %>
+

@@ -1,0 +1,20 @@
+<% @brand.models.order('title asc').each do |mdl| %>
+
+<div class="grid_4 height_78 list-back">
+	<div class="line_1 grid_4"></div>
+	<div class="grid_1 ">
+		<div class="margin_top_7">
+		<%= link_to image_tag('../images/arrow-button.jpg',
+								:mouseover=>'../images/arrow-button-over.jpg',
+								:border=>0 ), 
+								brand_model_path( @brand,mdl)%>
+		</div>
+	</div>
+	<div class="grid_1  margin_top_14">
+		<h2><%= link_to mdl.title, brand_model_path( @brand,mdl) %></h2>
+	</div>
+	<div class="grid_2  margin_top_20">
+		<p>Year: <%=mdl.year%></p>	
+	</div>
+</div>
+<%end%>

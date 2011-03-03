@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="grid_4 height_78">
+	<div class="grid_1 alpha">
+		<%= image_tag @model.brand.logo.url(:normal) unless @brand.logo.nil? %>
+	</div>
+	<div class="grid_2 omega margin_top_14">
+		<h2><%= @model.brand.title %> <%= @model.title %></h2><br/>
+		<p><%= @model.year%></p>
+	</div>
+	
+	<div class="grid_2 omega margin_top_14">
+		<%= link_to 'Edit', edit_brand_model_path(@brand) %> |
+		<%= link_to 'Back', vehicle_brand_path( @brand.vehicle , @brand)  %>
+	</div>
+	
+</div>
+
+<hr/>
+
+<%= render 'types'%>
+
+
+
+
+<%#= link_to 'Show Types', model_types_path(@model) %>
+<hr/>
+<%= link_to 'New Type', new_model_type_path(@model) %>
+
+
+

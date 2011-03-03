@@ -1,0 +1,31 @@
+<div class="grid_4 alpha omega">
+<%= render :partial => "shared/navigation" %>
+</div>
+<div class="grid_4">
+	<p>This page only shows on a iPhone at the moment</p>
+</div>
+<%= link_to 'New Vehicle', new_vehicle_path %> | 
+<%= link_to 'Vehicles', vehicles_path%>
+
+<br/>
+
+
+<%= link_to image_tag('../images/car.png',
+						:mouseover => '../images/car.png',
+						:border=>0 ), 
+						vehicle_path(1)%>
+						
+<%= link_to image_tag('../images/motorbike.png',
+						:mouseover => '../images/motorbike.png',
+						:border=>0 ), 
+						vehicle_path(2)%>
+						
+<%= link_to image_tag('../images/bus.png',
+						:mouseover => '../images/bus.png',
+						:border=>0 ), 
+						vehicle_path(3)%>
+						
+<%= link_to image_tag('../images/truck.png',
+						:mouseover => '../images/truck.png',
+						:border=>0 ), 
+						vehicle_path(4)%>

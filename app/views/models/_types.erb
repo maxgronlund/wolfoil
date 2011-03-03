@@ -1,0 +1,31 @@
+<% @model.types.each do |type| %>
+
+	<div class="grid_4 height_78 list-back">
+		<div class="line_1"></div>
+		<div class="grid_1 alpha">
+			<div class="margin_top_7">
+				
+			<%= link_to image_tag('../images/arrow-button.jpg',
+									:mouseover=>'../images/arrow-button-over.jpg',
+									:border=>0 ), 
+									model_type_path( @model,type) %>
+			</div>
+		</div>
+		<div class="grid_2 omega">
+			<div class="margin_top_7">
+				<p><%=type.title%></p>
+			</div>
+		</div>
+
+		<div class="grid_1 omega margin_top_7">
+			<%= link_to 'Edit', edit_model_type_path( @model,type) %> <br/> 
+			<%= link_to 'Delete', model_type_path( @model,type), :confirm => 'Are you sure?', :method => :delete %>
+		</div>
+	</div>
+
+
+<br/>
+
+
+
+<% end %>

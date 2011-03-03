@@ -1,0 +1,14 @@
+<%= render :partial => "shared/navigation" %>
+
+<div class="grid_4">
+	<h1>Brands</h1>
+</div>
+
+<%= render 'brands', :vehicle => @vehicle%>
+
+<br/>
+<div class="grid_4">
+<hr/>
+
+<%= link_to 'New Brand', new_vehicle_brand_path(@vehicle) %>
+</div>

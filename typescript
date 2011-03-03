@@ -1,0 +1,236 @@
+Script started on Thu Nov 25 13:52:28 2010
+bash-3.2$ gptrails ske db:migrate[8Pils s[4Pgpt[Kgptrails ske db:migrateils generate migration AddCalendarIdToConferenceroom calendar_id:integer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs[Kgenerate migration AddCalendarIdToConferenceroom calendar_id:integer[C[C[C[C[C[C[C[C[C[C[C[Cke db:migrate[K[8Pils s[4Pgpt[Kgptrails s[4Pgpt[Krails generate paperclip brand logo
+[1m[32m      create[0m  db/migrate/20101125125324_add_attachment_logo_to_brand.rb
+bash-3.2$ rake db:migrate
+(in /Users/synthmax/Dropbox/mobile)
+==  AddAttachmentLogoToBrand: migrating =======================================
+-- add_column(:brands, :logo_file_name, :string)
+   -> 0.1255s
+-- add_column(:brands, :logo_content_type, :string)
+   -> 0.2164s
+-- add_column(:brands, :logo_file_size, :integer)
+   -> 0.1417s
+-- add_column(:brands, :logo_updated_at, :datetime)
+   -> 0.1337s
+==  AddAttachmentLogoToBrand: migrated (0.6179s) ==============================
+
+bash-3.2$ git rake db:migrateils generate paperclip brand logo[C[C[C[C[C[C[C[C[C[Cgpt[Krails generate paperclip brand logo[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krake db:migrate
+(in /Users/synthmax/Dropbox/mobile)
+bash-3.2$ git status
+# On branch master
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mmodified:   Gemfile[m
+#	[31mmodified:   app/models/brand.rb[m
+#	[31mmodified:   app/views/brands/index.html.erb[m
+#	[31mdeleted:    app/views/shared/_navigation.html.erb[m
+#	[31mmodified:   app/views/vehicles/show.html.erb[m
+#	[31mmodified:   app/views/vehicles/show.mobile.erb[m
+#	[31mmodified:   db/schema.rb[m
+#	[31mmodified:   log/development.log[m
+#	[31mdeleted:    tmp/pids/server.pid[m
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	[31mconfig/s3.yml[m
+#	[31mdb/migrate/20101125125324_add_attachment_logo_to_brand.rb[m
+#	[31mpublic/images/fiat.jpg[m
+#	[31mtypescript[m
+#	[31mvendor/plugins/paperclip/[m
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git add .
+bash-3.2$ git commit
+[master 642c444] logo on cars
+ 86 files changed, 6407 insertions(+), 5 deletions(-)
+ create mode 100644 config/s3.yml
+ create mode 100644 db/migrate/20101125125324_add_attachment_logo_to_brand.rb
+ create mode 100644 public/images/fiat.jpg
+ create mode 100644 typescript
+ create mode 100644 vendor/plugins/paperclip/Appraisals
+ create mode 100644 vendor/plugins/paperclip/Gemfile
+ create mode 100644 vendor/plugins/paperclip/LICENSE
+ create mode 100644 vendor/plugins/paperclip/README.rdoc
+ create mode 100644 vendor/plugins/paperclip/Rakefile
+ create mode 100644 vendor/plugins/paperclip/cucumber/paperclip_steps.rb
+ create mode 100644 vendor/plugins/paperclip/features/basic.feature
+ create mode 100644 vendor/plugins/paperclip/features/s3.feature
+ create mode 100644 vendor/plugins/paperclip/features/step_definitions/html_steps.rb
+ create mode 100644 vendor/plugins/paperclip/features/step_definitions/rails_steps.rb
+ create mode 100644 vendor/plugins/paperclip/features/step_definitions/s3_steps.rb
+ create mode 100644 vendor/plugins/paperclip/features/step_definitions/web_steps.rb
+ create mode 100644 vendor/plugins/paperclip/features/support/env.rb
+ create mode 100644 vendor/plugins/paperclip/features/support/paths.rb
+ create mode 100644 vendor/plugins/paperclip/features/support/rails.rb
+ create mode 100644 vendor/plugins/paperclip/features/support/s3.rb
+ create mode 100644 vendor/plugins/paperclip/gemfiles/rails2.gemfile
+ create mode 100644 vendor/plugins/paperclip/gemfiles/rails3.gemfile
+ create mode 100644 vendor/plugins/paperclip/generators/paperclip/USAGE
+ create mode 100644 vendor/plugins/paperclip/generators/paperclip/paperclip_generator.rb
+ create mode 100644 vendor/plugins/paperclip/generators/paperclip/templates/paperclip_migration.rb.erb
+ create mode 100644 vendor/plugins/paperclip/init.rb
+ create mode 100644 vendor/plugins/paperclip/lib/generators/paperclip/USAGE
+ create mode 100644 vendor/plugins/paperclip/lib/generators/paperclip/paperclip_generator.rb
+ create mode 100644 vendor/plugins/paperclip/lib/generators/paperclip/templates/paperclip_migration.rb.erb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/attachment.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/callback_compatability.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/command_line.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/geometry.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/interpolations.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/iostream.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/matchers.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/matchers/have_attached_file_matcher.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/matchers/validate_attachment_content_type_matcher.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/matchers/validate_attachment_presence_matcher.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/matchers/validate_attachment_size_matcher.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/processor.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/railtie.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/storage.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/storage/filesystem.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/storage/s3.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/style.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/thumbnail.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/upfile.rb
+ create mode 100644 vendor/plugins/paperclip/lib/paperclip/version.rb
+ create mode 100644 vendor/plugins/paperclip/lib/tasks/paperclip.rake
+ create mode 100644 vendor/plugins/paperclip/paperclip.gemspec
+ create mode 100644 vendor/plugins/paperclip/rails/init.rb
+ create mode 100644 vendor/plugins/paperclip/shoulda_macros/paperclip.rb
+ create mode 100644 vendor/plugins/paperclip/test/.gitignore
+ create mode 100644 vendor/plugins/paperclip/test/attachment_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/command_line_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/database.yml
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/12k.png
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/50x50.png
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/5k.png
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/bad.png
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/s3.yml
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/text.txt
+ create mode 100644 vendor/plugins/paperclip/test/fixtures/twopage.pdf
+ create mode 100644 vendor/plugins/paperclip/test/geometry_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/helper.rb
+ create mode 100644 vendor/plugins/paperclip/test/integration_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/interpolations_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/iostream_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/matchers/have_attached_file_matcher_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/matchers/validate_attachment_content_type_matcher_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/matchers/validate_attachment_presence_matcher_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/matchers/validate_attachment_size_matcher_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/paperclip_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/processor_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/storage_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/style_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/thumbnail_test.rb
+ create mode 100644 vendor/plugins/paperclip/test/upfile_test.rb
+bash-3.2$ rails -v
+Rails 3.0.1
+bash-3.2$ quit
+bash: quit: command not found
+bash-3.2$ 
+bash-3.2$ git status
+# On branch master
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mdeleted:    app/views/shared/_navigation.html.erb[m
+#	[31mdeleted:    tmp/pids/server.pid[m
+#	[31mmodified:   typescript[m
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git commt[Kit
+# On branch master
+# Changed but not updated:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	[31mdeleted:    app/views/shared/_navigation.html.erb[m
+#	[31mdeleted:    tmp/pids/server.pid[m
+#	[31mmodified:   typescript[m
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git add .
+bash-3.2$ git sommit
+git: 'sommit' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+bash-3.2$ git commit
+[master 085b6c4] update
+ 1 files changed, 137 insertions(+), 0 deletions(-)
+bash-3.2$ git push herou master
+fatal: 'herou' does not appear to be a git repository
+fatal: The remote end hung up unexpectedly
+bash-3.2$ git push heroku master
+Counting objects: 147, done.
+Delta compression using up to 2 threads.
+Compressing objects:   0% (1/116)   Compressing objects:   1% (2/116)   Compressing objects:   2% (3/116)   Compressing objects:   3% (4/116)   Compressing objects:   4% (5/116)   Compressing objects:   5% (6/116)   Compressing objects:   6% (7/116)   Compressing objects:   7% (9/116)   Compressing objects:   8% (10/116)   Compressing objects:   9% (11/116)   Compressing objects:  10% (12/116)   Compressing objects:  11% (13/116)   Compressing objects:  12% (14/116)   Compressing objects:  13% (16/116)   Compressing objects:  14% (17/116)   Compressing objects:  15% (18/116)   Compressing objects:  16% (19/116)   Compressing objects:  17% (20/116)   Compressing objects:  18% (21/116)   Compressing objects:  19% (23/116)   Compressing objects:  20% (24/116)   Compressing objects:  21% (25/116)   Compressing objects:  22% (26/116)   Compressing objects:  23% (27/116)   Compressing objects:  24% (28/116)   Compressing objects:  25% (29/116)   Compressing objects:  26% (31/116)   Compressing objects:  27% (32/116)   Compressing objects:  28% (33/116)   Compressing objects:  29% (34/116)   Compressing objects:  30% (35/116)   Compressing objects:  31% (36/116)   Compressing objects:  32% (38/116)   Compressing objects:  33% (39/116)   Compressing objects:  34% (40/116)   Compressing objects:  35% (41/116)   Compressing objects:  36% (42/116)   Compressing objects:  37% (43/116)   Compressing objects:  38% (45/116)   Compressing objects:  39% (46/116)   Compressing objects:  40% (47/116)   Compressing objects:  41% (48/116)   Compressing objects:  42% (49/116)   Compressing objects:  43% (50/116)   Compressing objects:  44% (52/116)   Compressing objects:  45% (53/116)   Compressing objects:  46% (54/116)   Compressing objects:  47% (55/116)   Compressing objects:  48% (56/116)   Compressing objects:  49% (57/116)   Compressing objects:  50% (58/116)   Compressing objects:  51% (60/116)   Compressing objects:  52% (61/116)   Compressing objects:  53% (62/116)   Compressing objects:  54% (63/116)   Compressing objects:  55% (64/116)   Compressing objects:  56% (65/116)   Compressing objects:  57% (67/116)   Compressing objects:  58% (68/116)   Compressing objects:  59% (69/116)   Compressing objects:  60% (70/116)   Compressing objects:  61% (71/116)   Compressing objects:  62% (72/116)   Compressing objects:  63% (74/116)   Compressing objects:  64% (75/116)   Compressing objects:  65% (76/116)   Compressing objects:  66% (77/116)   Compressing objects:  67% (78/116)   Compressing objects:  68% (79/116)   Compressing objects:  69% (81/116)   Compressing objects:  70% (82/116)   Compressing objects:  71% (83/116)   Compressing objects:  72% (84/116)   Compressing objects:  73% (85/116)   Compressing objects:  74% (86/116)   Compressing objects:  75% (87/116)   Compressing objects:  76% (89/116)   Compressing objects:  77% (90/116)   Compressing objects:  78% (91/116)   Compressing objects:  79% (92/116)   Compressing objects:  80% (93/116)   Compressing objects:  81% (94/116)   Compressing objects:  82% (96/116)   Compressing objects:  83% (97/116)   Compressing objects:  84% (98/116)   Compressing objects:  85% (99/116)   Compressing objects:  86% (100/116)   Compressing objects:  87% (101/116)   Compressing objects:  88% (103/116)   Compressing objects:  89% (104/116)   Compressing objects:  90% (105/116)   Compressing objects:  91% (106/116)   Compressing objects:  92% (107/116)   Compressing objects:  93% (108/116)   Compressing objects:  94% (110/116)   Compressing objects:  95% (111/116)   Compressing objects:  96% (112/116)   Compressing objects:  97% (113/116)   Compressing objects:  98% (114/116)   Compressing objects:  99% (115/116)   Compressing objects: 100% (116/116)   Compressing objects: 100% (116/116), done.
+Writing objects:   0% (1/126)   Writing objects:   1% (2/126)   Writing objects:   2% (3/126)   Writing objects:   3% (4/126)   Writing objects:   4% (6/126)   Writing objects:   5% (7/126)   Writing objects:   6% (8/126)   Writing objects:   7% (9/126)   Writing objects:   8% (11/126)   Writing objects:   9% (12/126)   Writing objects:  10% (13/126)   Writing objects:  11% (14/126)   Writing objects:  12% (16/126)   Writing objects:  13% (17/126)   Writing objects:  14% (18/126)   Writing objects:  15% (19/126)   Writing objects:  16% (21/126)   Writing objects:  17% (22/126)   Writing objects:  18% (23/126)   Writing objects:  19% (24/126)   Writing objects:  20% (26/126)   Writing objects:  21% (27/126)   Writing objects:  22% (28/126)   Writing objects:  23% (29/126)   Writing objects:  24% (31/126)   Writing objects:  25% (32/126)   Writing objects:  26% (33/126)   Writing objects:  27% (35/126)   Writing objects:  28% (36/126)   Writing objects:  29% (37/126)   Writing objects:  30% (38/126)   Writing objects:  31% (40/126)   Writing objects:  32% (41/126)   Writing objects:  33% (42/126)   Writing objects:  34% (43/126)   Writing objects:  35% (45/126)   Writing objects:  36% (46/126)   Writing objects:  37% (47/126)   Writing objects:  38% (48/126)   Writing objects:  40% (51/126)   Writing objects:  41% (52/126)   Writing objects:  42% (53/126)   Writing objects:  43% (55/126)   Writing objects:  44% (56/126)   Writing objects:  45% (57/126)   Writing objects:  46% (58/126)   Writing objects:  47% (60/126)   Writing objects:  48% (61/126)   Writing objects:  49% (62/126)   Writing objects:  50% (63/126)   Writing objects:  51% (65/126)   Writing objects:  52% (66/126)   Writing objects:  53% (67/126)   Writing objects:  54% (69/126)   Writing objects:  55% (70/126)   Writing objects:  56% (71/126)   Writing objects:  57% (72/126)   Writing objects:  58% (74/126)   Writing objects:  59% (75/126)   Writing objects:  60% (76/126)   Writing objects:  61% (77/126)   Writing objects:  62% (79/126)   Writing objects:  63% (80/126)   Writing objects:  64% (81/126)   Writing objects:  65% (82/126)   Writing objects:  66% (84/126)   Writing objects:  67% (85/126)   Writing objects:  68% (86/126)   Writing objects:  69% (87/126)   Writing objects:  70% (89/126)   Writing objects:  71% (90/126)   Writing objects:  72% (91/126)   Writing objects:  73% (92/126)   Writing objects:  74% (94/126)   Writing objects:  75% (95/126)   Writing objects:  76% (96/126)   Writing objects:  77% (98/126)   Writing objects:  78% (99/126)   Writing objects:  79% (100/126)   Writing objects:  80% (101/126)   Writing objects:  81% (103/126)   Writing objects:  82% (104/126)   Writing objects:  83% (105/126)   Writing objects:  84% (106/126)   Writing objects:  85% (108/126)   Writing objects:  86% (109/126)   Writing objects:  87% (110/126)   Writing objects:  88% (111/126)   Writing objects:  89% (113/126)   Writing objects:  90% (114/126)   Writing objects:  92% (117/126)   Writing objects:  93% (118/126)   Writing objects:  94% (119/126)   Writing objects:  95% (120/126)   Writing objects:  96% (121/126)   Writing objects:  97% (123/126)   Writing objects:  98% (124/126)   Writing objects:  99% (125/126)   Writing objects: 100% (126/126)   Writing objects: 100% (126/126), 96.70 KiB, done.
+Total 126 (delta 22), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+-----> Detected Rails is not set to serve static_assets
+       Installing rails3_serve_static_assets... done
+-----> Gemfile detected, running Bundler version 1.0.3
+       Unresolved dependencies detected; Installing...
+
+ !     Gemfile.lock will soon be required
+ !     Check Gemfile.lock into git with `git add Gemfile.lock`
+ !     See http://docs.heroku.com/bundler
+
+       Fetching source index for http://rubygems.org/
+       Installing rake (0.8.7) 
+       Installing abstract (1.0.0) 
+       Installing activesupport (3.0.1) 
+       Installing builder (2.1.2) 
+       Installing i18n (0.4.2) 
+       Installing activemodel (3.0.1) 
+       Installing erubis (2.6.6) 
+       Installing rack (1.2.1) 
+       Installing rack-mount (0.6.13) 
+       Installing rack-test (0.5.6) 
+       Installing tzinfo (0.3.23) 
+       Installing actionpack (3.0.1) 
+       Installing mime-types (1.16) 
+       Installing polyglot (0.3.1) 
+       Installing treetop (1.4.9) 
+       Installing mail (2.2.10) 
+       Installing actionmailer (3.0.1) 
+       Installing arel (1.0.1) 
+       Installing activerecord (3.0.1) 
+       Installing activeresource (3.0.1) 
+       Installing xml-simple (1.0.12) 
+       Installing aws-s3 (0.6.2) 
+       Using bundler (1.0.3) 
+       Installing has_scope (0.5.0) 
+       Installing responders (0.6.2) 
+       Installing inherited_resources (1.1.2) 
+       Installing thor (0.14.6) 
+       Installing railties (3.0.1) 
+       Installing rails (3.0.1) 
+       Installing ruby-mysql (2.9.3) 
+       [32mYour bundle is complete! It was installed into ./.bundle/gems[0m
+       Compiled slug size is 4.0MB
+-----> Launching.... done
+       http://wolfoil.heroku.com deployed to Heroku
+
+To git@heroku.com:wolfoil.git
+   9f3e3ea..085b6c4  master -> master
+bash-3.2$ hr[Keroku db[K[Krake db:migrate
+(in /disk1/home/slugs/358930_085b6c4_c41e-1ef8cf61-a0df-4dc3-b058-1d8bc9349c6c/mnt)
+==  AddAttachmentLogoToBrand: migrating =======================================
+-- add_column(:brands, :logo_file_name, :string)
+   -> 0.0087s
+-- add_column(:brands, :logo_content_type, :string)
+   -> 0.0023s
+-- add_column(:brands, :logo_file_size, :integer)
+   -> 0.0021s
+-- add_column(:brands, :logo_updated_at, :datetime)
+   -> 0.0021s
+==  AddAttachmentLogoToBrand: migrated (0.0155s) ==============================
+
+bash-3.2$ 

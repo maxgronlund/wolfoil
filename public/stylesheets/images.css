@@ -1,0 +1,38 @@
+.banner_320
+{
+	margin:0px 0px 0px 0px;
+/*	background-image:url('../images/banner_320.jpg');*/
+	width:480px; 
+	height:60px;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	top:-10px;
+/*	left:-10px;*/
+
+	
+}
+
+.banner
+{
+	margin:0px 0px 0px 0px;
+	/*background-image:url('../images/banner.jpg');*/
+	width:320px; 
+	height:60px;
+	display:block;
+	overflow:hidden;
+	position:relative;
+	top:-10px;
+/*	left:-10px;*/
+
+}
+
+.list-back
+{
+	margin:0px 0px 0px 0px;
+	background-image:url('../images/list-back.jpg');
+	height:77px;
+	display:block;
+	overflow:hidden;
+
+}

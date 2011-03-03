@@ -1,0 +1,15 @@
+<div class="grid_4 alpha omega">
+<%= render :partial => "shared/navigation" %>
+</div>
+<div class="grid_4">
+	<h2><%= @vehicle.title %></h2>
+</div>
+
+<%= render 'brands'%>
+
+
+<%= link_to 'New Brand', new_vehicle_brand_path(@vehicle) %> <br/>
+
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

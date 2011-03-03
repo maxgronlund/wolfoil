@@ -1,0 +1,24 @@
+<div class="grid_4 alpha omega">
+	<%= render :partial => "shared/navigation" %>
+</div>
+<p id="notice"><%= notice %></p>
+
+<div class="grid_4 height_78 list-back">
+	<div class="grid_1 alpha">
+		<%= image_tag @brand.logo.url(:normal) unless @brand.logo.nil? %>
+	</div>
+	<div class="grid_2 omega margin_top_20">
+		<h2><%= @brand.title %> Models</h2>
+	</div>
+</div>
+
+
+<div class="clear"></div>
+
+<%= render 'brands'%>
+
+
+
+<%= link_to 'New Model', new_brand_model_path(@brand) %>
+<%#= link_to 'Edit', edit_vehicle_brand_path(@vehicle,@brand) %>
+<%#= link_to 'Back', vehicle_brands_path(@vehicle) %>

@@ -1,0 +1,421 @@
+/*-----------------------------
+RESET STYLES
+-----------------------------*/
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6{
+	margin:0;
+	padding:0;
+	-webkit-text-size-adjust:none; /* This stops the iPhone from automatically changing the size of the text when you flip the phone */
+	}
+body{
+	font-size: 62.5%; /* 62.5% means 1em = 10px */
+	}
+ul, li, ol, dl, dd, dt{
+	list-style:none;
+	padding:0;
+	margin:0;
+	}
+a{
+	text-decoration:none;
+	}
+ 
+/*-----------------------------
+	SITE SPECIFIC STYLES
+-----------------------------*/
+
+body{
+	background:#000;
+	font-family: Helvetica; /* Helvetica is on the iPhone already, so you may as well take advantage */
+	color:#000;
+	min-height:356px;
+	}
+p{
+	font-size:12px;
+	padding-bottom:8px;
+	color:#fff;
+}
+a{
+	color:#eee;
+	text-decoration:none;
+	font-size: 20px;
+	margin-bottom:12px;
+}
+
+/*-----------------------------
+	HEADINGS
+-----------------------------*/
+
+h1{
+	display:block;
+	width:112px;
+	height:41px;
+	text-indent:-5000px;
+	color:#ddd;
+
+}
+	
+h2{
+	color:#ddd;
+	font-size: 35px;
+	margin-bottom:0px;
+}
+
+h3{
+	color:#ddd;
+	font-size: 28px;
+	margin-bottom:0px;
+}
+
+h4{
+	color:#ddd;
+	font-size: 20px;
+	margin-bottom:0px;
+}
+
+h5{
+	color:#ddd;
+	font-size: 16px;
+	margin-bottom:0px;
+}
+
+h6{
+	color:#ddd;
+	font-size: 12px;
+	margin-bottom:0px;
+}
+
+/*-----------------------------
+	BASIC LAYOUT
+-----------------------------*/
+
+#page_wrapper{
+/*	padding-top:20px;*/
+	background:#000 url(images/page_background.gif) repeat-x;
+	overflow:auto;
+	}
+
+/*-----------------------------
+	ORIENTATION CLEVERNESS
+-----------------------------*/
+
+#content_left,
+#content_right,
+#content_normal,
+#content_flipped{
+	display:none;
+	}
+.show_normal,
+.show_flipped{
+	width:320px;
+	}
+.show_left,
+.show_right{
+	width:480px;
+	}
+
+.show_left #content_left,
+.show_right #content_right,
+.show_normal #content_normal,
+.show_flipped #content_flipped{
+	display:block;
+}
+
+.back_drop
+{
+	background-image:url('../images/mobile_website.jpg');
+	display:block;
+	overflow:hidden;
+	width:320px; 
+	height:480px;
+	margin:0px 0px 0px 0px;
+}
+
+
+.margin_left_10{
+	margin-left:10px;
+}
+
+.margin_left_30{
+	margin-left:30px;
+}
+
+.margin_left_20{
+	margin-left:20px;
+}
+
+
+
+
+
+/*
+.udgiv_botton
+{
+	position:relative;
+	overflow:hidden;
+	left:200px;
+	top:-100px;	
+	width:164px; 
+	height:64px;
+	background:transparent;
+
+}
+*/
+
+
+
+
+
+
+
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_4 {
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100.0%;
+	
+	
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0 !important;
+}
+
+.omega {
+	margin-right: 0 !important;
+}
+
+
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4{
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 1.0%;
+	margin-right: 1.0%;
+}
+
+
+/* Grid >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_4 .grid_1{
+	width:23.0%;
+}
+
+.container_4 .grid_2{
+	width:48.0%;
+}
+
+.container_4 .grid_3{
+	width:73.0%;
+}
+
+.container_4 .grid_4{
+	width:98.0%;
+}
+
+
+
+
+.grid_1 .grid_1{
+    width:97.0%;
+    margin-left: 12.0%;
+	margin-right: 12.0%;
+}
+
+
+
+.grid_2 .grid_1{
+    width:47.0%;
+    margin-left: 6.0%;
+	margin-right: 6.0%;
+}
+
+.grid_2 .grid_2{
+    width:97.0%;
+    margin-left: 6.0%;
+	margin-right: 6.0%;
+}
+
+
+
+.grid_3 .grid_1{
+    width:30.3333333333%;
+    margin-left: 4.0%;
+	margin-right: 4.0%;
+}
+
+.grid_3 .grid_2{
+    width:63.6666666667%;
+    margin-left: 4.0%;
+	margin-right: 4.0%;
+}
+
+.grid_3 .grid_3{
+    width:97.0%;
+    margin-left: 4.0%;
+	margin-right: 4.0%;
+}
+
+
+
+.grid_4 .grid_1{
+    width:22.0%;
+    margin-left: 3.0%;
+	margin-right: 3.0%;
+}
+
+.grid_4 .grid_2{
+    width:47.0%;
+    margin-left: 3.0%;
+	margin-right: 3.0%;
+}
+
+.grid_4 .grid_3{
+    width:72.0%;
+    margin-left: 3.0%;
+	margin-right: 3.0%;
+}
+
+.grid_4 .grid_4{
+    width:97.0%;
+    margin-left: 3.0%;
+	margin-right: 3.0%;
+}
+
+
+
+
+
+
+/* Prefix Extra Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_4 .prefix_1 {
+    padding-left:25.0%;
+}
+
+.container_4 .prefix_2 {
+    padding-left:50.0%;
+}
+
+.container_4 .prefix_3 {
+    padding-left:75.0%;
+}
+
+
+
+/* Suffix Extra Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_4 .suffix_1 {
+    padding-right:25.0%;
+}
+
+.container_4 .suffix_2 {
+    padding-right:50.0%;
+}
+
+.container_4 .suffix_3 {
+    padding-right:75.0%;
+}
+
+
+
+/* Push Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_4 .push_1 {
+    left:25.0%;
+}
+
+.container_4 .push_2 {
+    left:50.0%;
+}
+
+.container_4 .push_3 {
+    left:75.0%;
+}
+
+
+
+
+
+/* Pull Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_4 .pull_1 {
+    right:25.0%;
+}
+
+.container_4 .pull_2 {
+    right:50.0%;
+}
+
+.container_4 .pull_3 {
+    right:75.0%;
+}
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+#type_title
+{
+	width:20px;
+	size:40px;
+}
+
+
+
+
+
+
+
+

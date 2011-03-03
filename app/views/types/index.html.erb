@@ -1,0 +1,17 @@
+<h1>Listing types</h1>
+
+
+
+<% @types.each do |type| %>
+
+<%= type.title %>
+<br/>
+
+<%#= link_to 'Show', type %>
+<%#= link_to 'Edit', edit_type_path(type) %>
+<%#= link_to 'Destroy', type, :confirm => 'Are you sure?', :method => :delete %>
+
+<% end %>
+
+
+<%#= link_to 'New Type', new_type_path %>
